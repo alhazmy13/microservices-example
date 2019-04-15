@@ -3,9 +3,9 @@ import os
 from flask import Flask
 
 CONFIG_NAME_MAPPER = {
-    'development': 'user.config.DevelopmentConfig',
-    'testing': 'user.config.TestingConfig',
-    'production': 'user.config.ProductionConfig'
+    'development': 'config.DevelopmentConfig',
+    'testing': 'config.TestingConfig',
+    'production': 'config.ProductionConfig'
 }
 
 
@@ -35,10 +35,10 @@ def create_app(flask_config_name=None, **kwargs):
     except ImportError:
         raise
 
-    from . import extenstions
+    from app import extenstions
     extenstions.init_app(app)
 
-    from . import user
+    from app import user
     user.init_app(app)
 
     return app

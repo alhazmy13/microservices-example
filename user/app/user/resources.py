@@ -1,8 +1,8 @@
 from flask import jsonify, Blueprint, request
 
-from user.app.user.models import User
-from user.app.user.models import db
-from user.app.user.services.user_event_handler import emit_user_profile_update
+from app.user.models import User
+from app.user.models import db
+from app.user.services.user_event_handler import emit_user_profile_update
 
 api = Blueprint("users", __name__, url_prefix='/users')
 

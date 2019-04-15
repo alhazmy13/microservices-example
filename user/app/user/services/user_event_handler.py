@@ -1,7 +1,7 @@
 import pika
 import json
 
-from user.app.extenstions import fpika
+from app.extenstions import fpika
 
 
 def emit_user_profile_update(user):

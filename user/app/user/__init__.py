@@ -5,5 +5,5 @@ def init_app(app, **kwargs):
     """
 
     # Touch underlying modules
-    from . import models, resources  # pylint: disable=unused-variable
+    from app.user import models, resources  # pylint: disable=unused-variable
     app.register_blueprint(resources.api)

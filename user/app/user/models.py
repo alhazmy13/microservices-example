@@ -1,6 +1,6 @@
 from sqlalchemy import inspect
 
-from user.app.extenstions import db
+from app.extenstions import db
 
 
 class User(db.Model):

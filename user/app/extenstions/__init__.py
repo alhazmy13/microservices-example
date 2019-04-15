@@ -1,4 +1,4 @@
-from .flask_sqlalchemy import SQLAlchemy
+from app.extenstions.flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
@@ -11,7 +11,7 @@ from flask_marshmallow import Marshmallow
 
 marshmallow = Marshmallow()
 
-from .pika import Pika as FPika
+from app.extenstions.pika import Pika as FPika
 
 fpika = FPika()
 
