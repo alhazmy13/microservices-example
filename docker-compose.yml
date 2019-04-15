@@ -16,12 +16,17 @@ services:
     depends_on:
       - rabbitmq-server
     tty: true
-    ports:
-      - "5001:5001"
     volumes:
       - './user-service:/user-service'
-
+  api-service:
+    build: ./user
+    depends_on:
+      - rabbitmq-server
+    tty: true
+    volumes:
+      - './api-service:/api-service'
 
 # Host volumes used to store code.
 volumes:
   user-service:
+  api-service:

@@ -41,6 +41,10 @@ def create_app(flask_config_name=None, **kwargs):
     from app import user
     user.init_app(app)
 
+    from app.extenstions import db
+    with app.app_context():
+        db.create_all()
+
     return app
 
 

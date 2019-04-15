@@ -1,3 +1,3 @@
 def init_app(app, **kwargs):
-    from app.user import resources  # pylint: disable=unused-variable
-    app.register_blueprint(resources.api)
+    from app.user import route  # pylint: disable=unused-variable
+    app.register_blueprint(route.api)
