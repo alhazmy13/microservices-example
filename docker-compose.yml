@@ -23,6 +23,8 @@ services:
     depends_on:
       - rabbitmq-server
     tty: true
+    ports:
+      - "5000:5000"
     volumes:
       - './api-service:/api-service'
 
