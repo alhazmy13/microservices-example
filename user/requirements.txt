@@ -8,7 +8,7 @@ SQLAlchemy==1.1.5
 SQLAlchemy-Utils==0.32.12
 Flask-SQLAlchemy==2.2
 Alembic==0.8.10
-
+gunicorn
 marshmallow>=2.13.5
 flask-marshmallow==0.7.0
 marshmallow-sqlalchemy==0.12.0

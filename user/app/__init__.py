@@ -42,3 +42,6 @@ def create_app(flask_config_name=None, **kwargs):
     user.init_app(app)
 
     return app
+
+
+app = create_app()
