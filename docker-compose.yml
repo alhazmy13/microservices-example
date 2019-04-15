@@ -1,0 +1,27 @@
+version: "3.2"
+services:
+  rabbitmq-server:
+    image: "rabbitmq:3-management"
+    hostname: "rabbitmq-server"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  user-service:
+    build: ./user
+    depends_on:
+      - rabbitmq-server
+    tty: true
+    ports:
+      - "5001:5001"
+    volumes:
+      - './user-service:/user-service'
+
+
+# Host volumes used to store code.
+volumes:
+  user-service:
