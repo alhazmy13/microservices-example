@@ -14,7 +14,7 @@ class BaseConfig(object):
 
     # Pika Configuration
     FLASK_PIKA_PARAMS = {
-        'host': 'rabbitmq-server',
+        'host': 'localhost',
         'username': 'guest',
         'password': 'guest',
         'port': 5672
