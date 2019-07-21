@@ -25,7 +25,6 @@ The following is a list for the services:
 * User service: manage the user account operations.
 * Email service: responsible for sending emails into a mail server. *(WORKING ON IT)*
 
-
 # System Technology
 
 The main technology for building this backend system.
@@ -39,6 +38,37 @@ The main technology for building this backend system.
 
 Since each service are isolated, then you can use any database for each service based on the functionally of the service, however in this example we are used sqlite in user service.  
 
+
+# Environment:
+* Rabbitmq : follow instructions in the [link](https://www.rabbitmq.com/install-homebrew.html).
+* Python 3.6 [link](https://stackoverflow.com/questions/51125013/how-can-i-install-a-previous-version-of-python-3-in-macos-using-homebrew)
+
+
+# Run Example:
+
+First you need to run `Rabbitmq` with command:
+
+```
+ brew services start rabbitmq
+```
+
+to stop `Rabbitmq`:
+
+```
+ brew services stop rabbitmq
+```
+
+then run from `api` folder command:
+
+```
+python3.6 app.py
+```
+
+then run from `user` folder command:
+
+```
+python3.6 app.py
+```
 
 
 
